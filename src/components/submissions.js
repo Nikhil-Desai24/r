@@ -20,7 +20,7 @@ function Submissions() {
             entry = allEntries.filter(item => parseInt(item['id']) === parseInt(id))[0]
             setSingleEntry(entry)
         }
-    },[]);
+    });
 
     const handleCheckVal = (ty,entry) =>{
         var val =''

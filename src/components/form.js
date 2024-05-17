@@ -56,12 +56,14 @@ function FeedbackForm() {
         }
         else if(checked_val.length < Object.keys(feedback_type).length){
             let keys = Object.keys(feedback_type)
-            checked_val.map((val)=>{
-                keys = keys.filter(item => item !== val.split('_')[0])
-            })
-            keys.map(val =>{
-                document.getElementById('er_'+val).style.display = "block";
-            })
+            checked_val.forEach((val) => {
+                keys = keys.filter(item => item !== val.split('_')[0]);
+            });
+            
+            keys.forEach(val => {
+                document.getElementById('er_' + val).style.display = "block";
+            });
+            
         }
         else return true;
     };
